@@ -4,6 +4,8 @@ gem 'rake'
 gem 'hanami',       '~> 1.1'
 gem 'hanami-model', '~> 1.1'
 
+gem 'http'
+gem 'oga'
 gem 'pg'
 
 group :development do

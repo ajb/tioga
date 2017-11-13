@@ -10,3 +10,7 @@ end
 
 task default: :test
 task spec: :test
+
+task scrape_status: :environment do
+  StatusScraper.execute!
+end
