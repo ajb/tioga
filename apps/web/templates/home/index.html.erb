@@ -1,7 +1,11 @@
-<h2>Tioga</h2>
+<h1>
+  <% if @is_open %>
+    Yes
+  <% else %>
+    No
+  <% end %>
+</h1>
 
-<% if @is_open %>
-  Open
-<% else %>
-  Closed
-<% end %>
+<h2>
+  Tioga Pass road is <a href='<%= StatusScraper::CONDITIONS_URL %>' target='_blank'><% if @is_open %>open<% else %>closed<% end %></a>.
+</h2>

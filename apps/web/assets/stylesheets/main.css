@@ -1,0 +1,19 @@
+body {
+  text-align: center;
+  font-family: sans-serif;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 100px;
+}
+
+h2 {
+  font-weight: 300;
+}
+
+@media (min-height: 450px) {
+  body {
+    padding-top: 150px;
+  }
+}
