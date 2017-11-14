@@ -1,11 +1,17 @@
 <h1>
-  <% if is_open %>
+  <% if most_recent_status == 'open' %>
     Yes
-  <% else %>
+  <% elsif most_recent_status == 'closed' %>
     No
+  <% elsif most_recent_status == 'call' %>
+    Maybe
   <% end %>
 </h1>
 
 <h2>
-  Tioga Pass road is <a href='<%= StatusScraper::CONDITIONS_URL %>' target='_blank'><% if is_open %>open<% else %>closed<% end %></a>.
+  <% if most_recent_status == 'call' %>
+    <a href='<%= StatusScraper::CONDITIONS_URL %>' target='_blank' rel='noopener noreferrer'>It's complicated.</a> Call (209) 372-0200 (press 1 then 1) for more details.
+  <% else %>
+    Tioga Pass road is <a href='<%= StatusScraper::CONDITIONS_URL %>' target='_blank' rel='noopener noreferrer'><% if most_recent_status == 'open' %>open<% else %>closed<% end %></a>.
+  <% end %>
 </h2>

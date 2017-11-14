@@ -4,6 +4,7 @@ gem 'rake'
 gem 'hanami',       '~> 1.1'
 gem 'hanami-model', '~> 1.1'
 
+gem 'activesupport', require: 'active_support/all'
 gem 'http'
 gem 'oga'
 gem 'pg'
