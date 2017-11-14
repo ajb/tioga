@@ -293,9 +293,7 @@ module Web
     # PRODUCTION
     #
     configure :production do
-      # scheme 'https'
-      # host   'example.org'
-      # port   443
+      host 'www.istiogapassopen.com'
 
       force_ssl true
 
