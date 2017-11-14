@@ -6,4 +6,11 @@ class StatusCheckRepository < Hanami::Repository
       limit(1).
       one
   end
+
+  def clear_old_statuses!
+    # This is silly!
+    Hanami::Model.configuration.connection.run(
+      Sequel.lit('DELETE FROM status_checks where created_at < ?', 1.week.ago)
+    )
+  end
 end

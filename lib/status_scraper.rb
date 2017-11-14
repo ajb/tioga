@@ -6,10 +6,14 @@ class StatusScraper
     def execute!
       req = HTTP.get(CONDITIONS_URL)
 
-      StatusCheckRepository.new.create(
+      repo = StatusCheckRepository.new
+
+      repo.create(
         status: req_to_status(req),
         response_html: req.to_s
       )
+
+      repo.clear_old_statuses!
     end
 
     private
