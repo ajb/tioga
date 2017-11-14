@@ -297,6 +297,8 @@ module Web
       # host   'example.org'
       # port   443
 
+      force_ssl true
+
       assets do
         # Don't compile static assets in production mode (eg. Sass, ES6)
         #
