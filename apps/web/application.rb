@@ -238,7 +238,7 @@ module Web
         frame-ancestors 'self';
         base-uri 'self';
         default-src 'none';
-        script-src 'self';
+        script-src 'self' https://www.google-analytics.com/ 'sha256-3BxyHTpjlB/MRhnJES1Tv4H3+VGSNyz3XX+GU3HwVU0=';
         connect-src 'self';
         img-src 'self' https: data:;
         style-src 'self' 'unsafe-inline' https:;
