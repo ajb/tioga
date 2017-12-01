@@ -295,7 +295,7 @@ module Web
     configure :production do
       host 'www.istiogapassopen.com'
 
-      force_ssl true
+      # force_ssl true
 
       assets do
         # Don't compile static assets in production mode (eg. Sass, ES6)
